@@ -113,11 +113,16 @@ class VelocityTransitionGroupChild extends React.Component {
   };
 
   componentWillUnmount() {
-    // Clear references from velocity cache.
-    Velocity.Utilities.removeData(ReactDOM.findDOMNode(this), [
-      'velocity',
-      'fxqueue',
-    ]);
+    try {
+      // Clear references from velocity cache.
+      Velocity.Utilities.removeData(ReactDOM.findDOMNode(this), [
+        'velocity',
+        'fxqueue',
+      ]);
+    }
+    catch(err) {
+      console.log(err);
+    }
   }
 
   render() {
