@@ -1,6 +1,6 @@
 {
   "name": "velocity-react",
-  "version": "1.4.1",
+  "version": "1.4.4",
   "description": "React components to wrap Velocity animations",
   "main": "index.js",
   "scripts": {
